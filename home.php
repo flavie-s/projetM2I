@@ -65,7 +65,7 @@ class TableRows extends RecursiveIteratorIterator {
 
 <!-- Footer -->
 <footer class="w3-container w3-black w3-padding-16">
-  <p>Admin <a href="login.php" target="_blank">login</a></p>
+  <p>Admin <a href="login.php">login</a></p>
 </footer>
 
 </body>
