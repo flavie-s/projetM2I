@@ -7,7 +7,7 @@ $csvfile=$_POST["csvfile"];
 
 <!DOCTYPE html>
 <html>
-<title>Import</title>
+<title>Recap_Import</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="refresh" content="2;URL=admin.php">
@@ -18,7 +18,7 @@ $csvfile=$_POST["csvfile"];
 <div class="w3-row">
   <div class="w3-third w3-black w3-container w3-center">
     <div class="w3-padding-64">
-      <h1>Import</h1>
+      <h1>Recap Import</h1>
     </div>
   </div>
   <div class="w3-three-quarters w3-blue-grey w3-container w3-center" style="height:700px">
@@ -45,7 +45,7 @@ if(!file_exists($csvfile))
   {
     die("database connection failed: ".$e->getMessage());
   }
-  $sql = "LOAD DATA LOCAL INFILE '$csvfile' INTO TABLE eau FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 LINES" (REFERENCE, MARQUE, QUANTITE, PRIX, DATE_ACHAT);
+  $sql = "LOAD DATA LOCAL INFILE '$csvfile' INTO TABLE eau FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 LINES (REFERENCE, MARQUE, QUANTITE, PRIX, DATE_ACHAT)";
   $pdo->exec($sql);
   
   echo "Importation terminée";
